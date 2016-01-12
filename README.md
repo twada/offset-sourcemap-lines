@@ -3,6 +3,11 @@ offset-sourcemap-lines
 
 Offset each generated lines in SourceMap
 
+[![Build Status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![License][license-image]][license-url]
+
 
 DESCRIPTION
 ---------------------------------------
@@ -50,3 +55,15 @@ AUTHOR
 LICENSE
 ---------------------------------------
 Licensed under the [MIT](http://twada.mit-license.org/) license.
+
+[npm-url]: https://npmjs.org/package/offset-sourcemap-lines
+[npm-image]: https://badge.fury.io/js/offset-sourcemap-lines.svg
+
+[travis-url]: http://travis-ci.org/twada/offset-sourcemap-lines
+[travis-image]: https://secure.travis-ci.org/twada/offset-sourcemap-lines.svg?branch=master
+
+[depstat-url]: https://gemnasium.com/twada/offset-sourcemap-lines
+[depstat-image]: https://gemnasium.com/twada/offset-sourcemap-lines.svg
+
+[license-url]: http://twada.mit-license.org/
+[license-image]: https://img.shields.io/badge/license-MIT-brightgreen.svg
