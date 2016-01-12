@@ -1,3 +1,13 @@
+/**
+ * offset-sourcemap-lines:
+ *   offset each generated lines in SourceMap
+ * 
+ * https://github.com/twada/offset-sourcemap-lines
+ *
+ * Copyright (c) 2016 Takuto Wada
+ * Licensed under the MIT license.
+ *   http://twada.mit-license.org/
+ */
 'use strict';
 
 var sourceMap = require('source-map');
