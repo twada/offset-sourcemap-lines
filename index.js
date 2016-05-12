@@ -19,12 +19,18 @@ module.exports = function offsetLines (incomingSourceMap, lineOffset) {
         sourceRoot: incomingSourceMap.sourceRoot
     });
     consumer.eachMapping(function (m) {
-        generator.addMapping({
-            source: m.source,
-            name: m.name,
-            original: { line: m.originalLine, column: m.originalColumn },
-            generated: { line: m.generatedLine + lineOffset, column: m.generatedColumn }
-        });
+        // skip invalid (not-connected) mapping
+        // refs: https://github.com/mozilla/source-map/blob/182f4459415de309667845af2b05716fcf9c59ad/lib/source-map-generator.js#L268-L275
+        if (typeof m.originalLine === 'number' && 0 < m.originalLine &&
+            typeof m.originalColumn === 'number' && 0 <= m.originalColumn &&
+            m.source) {
+            generator.addMapping({
+                source: m.source,
+                name: m.name,
+                original: { line: m.originalLine, column: m.originalColumn },
+                generated: { line: m.generatedLine + lineOffset, column: m.generatedColumn }
+            });
+        }
     });
     var outgoingSourceMap = JSON.parse(generator.toString());
     if (typeof incomingSourceMap.sourcesContent !== undefined) {
