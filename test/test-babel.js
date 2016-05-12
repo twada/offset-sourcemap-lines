@@ -13,6 +13,17 @@ const targetLine = {
 };
 const offsettedMap = offsetLines(originalMap, 15);
 
+test('some invalid mapping in upstream sourcemap', t => {
+    const consumer = new SourceMapConsumer(originalMap);
+    const invalidMappings = [];
+    consumer.eachMapping((m) => {
+        if (m.source === null && m.originalLine === null && m.originalColumn === null) {
+            invalidMappings.push(m);
+        }
+    });
+    t.ok(0 < invalidMappings.length);
+});
+
 test('generated positions in originalMap', t => {
     const consumer = new SourceMapConsumer(originalMap);
     const generated = consumer.allGeneratedPositionsFor(targetLine);
