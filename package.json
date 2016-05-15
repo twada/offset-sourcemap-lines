@@ -33,6 +33,6 @@
     "url": "git://github.com/twada/offset-sourcemap-lines.git"
   },
   "scripts": {
-    "test": "ava --verbose test/test.js test/test-babel.js"
+    "test": "ava --verbose test/test-coffee.js test/test-babel.js"
   }
 }

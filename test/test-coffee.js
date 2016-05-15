@@ -18,21 +18,9 @@ test('generated positions in originalMap', t => {
     const consumer = new SourceMapConsumer(originalMap);
     const generated = consumer.allGeneratedPositionsFor(targetPosition);
     t.deepEqual(generated, [
-        {
-            line: 27,
-            column: 11,
-            lastColumn: null
-        },
-        {
-            line: 27,
-            column: 17,
-            lastColumn: null
-        },
-        {
-            line: 27,
-            column: 53,
-            lastColumn: null
-        }
+        { line: 27, column: 11, lastColumn: null },
+        { line: 27, column: 17, lastColumn: null },
+        { line: 27, column: 53, lastColumn: null }
     ]);
 });
 
@@ -40,21 +28,9 @@ test('generated positions in offsetted SourceMap', t => {
     const consumer = new SourceMapConsumer(offsettedMap);
     const generated = consumer.allGeneratedPositionsFor(targetPosition);
     t.deepEqual(generated, [
-        {
-            line: 42,
-            column: 11,
-            lastColumn: null
-        },
-        {
-            line: 42,
-            column: 17,
-            lastColumn: null
-        },
-        {
-            line: 42,
-            column: 53,
-            lastColumn: null
-        }
+        { line: 42, column: 11, lastColumn: null },
+        { line: 42, column: 17, lastColumn: null },
+        { line: 42, column: 53, lastColumn: null }
     ]);
 });
 
