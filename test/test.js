@@ -17,7 +17,7 @@ const offsettedMap = offsetLines(originalMap, 15);
 test('generated positions in originalMap', t => {
     const consumer = new SourceMapConsumer(originalMap);
     const generated = consumer.allGeneratedPositionsFor(targetPosition);
-    t.same(generated, [
+    t.deepEqual(generated, [
         {
             line: 27,
             column: 11,
@@ -39,7 +39,7 @@ test('generated positions in originalMap', t => {
 test('generated positions in offsetted SourceMap', t => {
     const consumer = new SourceMapConsumer(offsettedMap);
     const generated = consumer.allGeneratedPositionsFor(targetPosition);
-    t.same(generated, [
+    t.deepEqual(generated, [
         {
             line: 42,
             column: 11,
@@ -59,7 +59,7 @@ test('generated positions in offsetted SourceMap', t => {
 });
 
 test(`property [mappings] should be changed`, t => {
-    t.notSame(originalMap.mappings, offsettedMap.mappings);
+    t.notDeepEqual(originalMap.mappings, offsettedMap.mappings);
 });
 
 const unchangedProps = [
@@ -72,6 +72,6 @@ const unchangedProps = [
 ];
 for (let propName of unchangedProps) {
     test(`property [${propName}] should not be changed`, t => {
-        t.same(originalMap[propName], offsettedMap[propName]);
+        t.deepEqual(originalMap[propName], offsettedMap[propName]);
     });
 }
