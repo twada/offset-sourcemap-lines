@@ -1,3 +1,11 @@
+### [1.0.1](https://github.com/twada/offset-sourcemap-lines/releases/tag/v1.0.1) (2018-02-28)
+
+
+#### Bug Fixes
+
+* fix undefined check ([5edec0c8](https://github.com/twada/offset-sourcemap-lines/commit/5edec0c8361fd9a53d109ac0fd6cca5d4e7e8669))
+
+
 ## [1.0.0](https://github.com/twada/offset-sourcemap-lines/releases/tag/v1.0.0) (2016-05-17)
 
 
