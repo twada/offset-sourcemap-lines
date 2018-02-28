@@ -65,5 +65,5 @@ Licensed under the [MIT](https://twada.mit-license.org/) license.
 [depstat-url]: https://gemnasium.com/twada/offset-sourcemap-lines
 [depstat-image]: https://gemnasium.com/twada/offset-sourcemap-lines.svg
 
-[license-url]: https://twada.mit-license.org/
+[license-url]: https://twada.mit-license.org/2016-2018
 [license-image]: https://img.shields.io/badge/license-MIT-brightgreen.svg

@@ -4,9 +4,9 @@
  * 
  * https://github.com/twada/offset-sourcemap-lines
  *
- * Copyright (c) 2016 Takuto Wada
+ * Copyright (c) 2016-2018 Takuto Wada
  * Licensed under the MIT license.
- *   https://twada.mit-license.org/
+ *   https://twada.mit-license.org/2016-2018
  */
 'use strict';
 
