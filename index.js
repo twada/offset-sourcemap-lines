@@ -33,7 +33,7 @@ module.exports = function offsetLines (incomingSourceMap, lineOffset) {
         }
     });
     var outgoingSourceMap = JSON.parse(generator.toString());
-    if (typeof incomingSourceMap.sourcesContent !== undefined) {
+    if (typeof incomingSourceMap.sourcesContent !== 'undefined') {
         outgoingSourceMap.sourcesContent = incomingSourceMap.sourcesContent;
     }
     return outgoingSourceMap;
